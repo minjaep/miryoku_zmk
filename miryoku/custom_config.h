@@ -69,6 +69,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            \
 &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            U_A_LANG,          &trans,            &trans
 
+#if defined (MIRYOKU_KEYBOARD_CORNE)
 
 #if !defined (MIRYOKU_LAYOUTMAPPING_CORNE)
 
@@ -86,7 +87,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
                K32  K33  K34       K35  K36  K37
 
 #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
-#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 
 #define KEYS_T 36 37 38 39 40 41
 
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_LEFTPINKIE 2 3
@@ -113,6 +114,9 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 
 #define MIRYOKU_MAPPING MIRYOKU_LAYOUTMAPPING_CORNE
 
+#endif
+
+#if defined (MIRYOKU_KEYBOARD_MINIDOX)
 
 #if !defined (MIRYOKU_LAYOUTMAPPING_MINIDOX)
 
@@ -154,3 +158,5 @@ K20  K21  K22  K23  K24       K25  K26  K27  K28  K29 \
 #endif
 
 #define MIRYOKU_MAPPING MIRYOKU_LAYOUTMAPPING_MINIDOX
+
+#if defined (MIRYOKU_KEYBOARD_MINIDOX)
