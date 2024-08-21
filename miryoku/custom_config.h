@@ -5,6 +5,12 @@
 #define U_LANG &u_macro_lang
 #define U_A_LANG &u_macro_and_lang
 
+#define U_HL(MOD, TAP) &hm_l MOD TAP
+#define U_HR(MOD, TAP) &hm_r MOD TAP
+#define U_HSL(MOD, TAP) &hm_shift_l MOD TAP
+#define U_HSR(MOD, TAP) &hm_shift_r MOD TAP
+#define U_HM(LAYER, TAP) &hm LAYER TAP
+
 #if !defined (MIRYOKU_LAYER_LIST)
 
 #define MIRYOKU_LAYER_LIST \
@@ -35,15 +41,15 @@ MIRYOKU_X(FUN,    "Fun")
 
 #define MIRYOKU_LAYER_BASE \
 &kp Q,             &kp W,             &kp F,             &kp P,             &kp B,             &kp J,             &kp L,             &kp U,             &kp Y,             &kp SQT,           \
-U_MT(LGUI, A),     U_MT(LALT, R),     U_MT(LCTRL, S),    U_MT(LSHFT, T),    &kp G,             &kp M,             U_MT(LSHFT, N),    U_MT(LCTRL, E),    U_MT(LALT, I),     U_MT(LGUI, O),     \
+U_HL(LGUI, A),     U_HL(LALT, R),     U_HL(LCTRL, S),    U_HSL(LSHFT, T),   &kp G,             &kp M,             U_HSR(LSHFT, N),   U_HR(LCTRL, E),    U_HR(LALT, I),     U_HR(LGUI, O),     \
 U_LT(U_BUTTON, Z), U_MT(RALT, X),     &kp C,             &kp D,             &kp V,             &kp K,             &kp H,             &kp COMMA,         U_MT(RALT, DOT),   U_LT(U_BUTTON, SLASH),\
-U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_NAV, SPACE),U_LT(U_MOUSE, TAB),U_LT(U_SYM, RET),  U_LT(U_NUM, BSPC), U_LANG,  U_NP,              U_NP
+U_NP,              U_NP,              U_HM(U_MEDIA, ESC),U_HM(U_NAV, SPACE),U_HM(U_MOUSE, TAB),U_HM(U_SYM, RET),  U_HM(U_NUM, BSPC), U_LANG,  U_NP,              U_NP
 
 #define MIRYOKU_LAYER_EXTRA \
 &kp Q,             &kp W,             &kp E,             &kp R,             &kp T,             &kp Y,             &kp U,             &kp I,             &kp O,             &kp P,             \
-U_MT(LGUI, A),     U_MT(LALT, S),     U_MT(LCTRL, D),    U_MT(LSHFT, F),    &kp G,             &kp H,             U_MT(LSHFT, J),    U_MT(LCTRL, K),    U_MT(LALT, L),     U_MT(LGUI, SQT),   \
+U_HL(LGUI, A),     U_HL(LALT, S),     U_HL(LCTRL, D),    U_HSL(LSHFT, F),   &kp G,             &kp H,             U_HSR(LSHFT, J),   U_HR(LCTRL, K),    U_HR(LALT, L),     U_HR(LGUI, SQT),   \
 U_LT(U_BUTTON, Z), U_MT(RALT, X),     &kp C,             &kp V,             &kp B,             &kp N,             &kp M,             &kp COMMA,         U_MT(RALT, DOT),   U_LT(U_BUTTON, SLASH),\
-U_NP,              U_NP,              U_LT(U_MEDIA, ESC),U_LT(U_NAV, SPACE),U_LT(U_MOUSE, TAB),U_LT(U_SYM, RET),  U_LT(U_NUM, BSPC), U_LANG,  U_NP,              U_NP
+U_NP,              U_NP,              U_HM(U_MEDIA, ESC),U_HM(U_NAV, SPACE),U_HM(U_MOUSE, TAB),U_HM(U_SYM, RET),  U_HM(U_NUM, BSPC), U_LANG,  U_NP,              U_NP
 
 #define MIRYOKU_LAYER_MOUSE \
 U_BOOT,            &u_to_U_TAP,       &u_to_U_EXTRA,     &u_to_U_BASE,      U_NA,              U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
@@ -78,6 +84,10 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 &u_caps_word  K10  K11  K12  K13  K14       K15  K16  K17  K18  K19  &tog U_FUN \
 &tog U_EXTRA  K20  K21  K22  K23  K24       K25  K26  K27  K28  K29  &tog U_BUTTON \
                K32  K33  K34       K35  K36  K37
+
+#define KEYS_L K00 K01 K02 K03 K04 K10 K11 K12 K13 K14 K20 K21 K22 K23 K24
+#define KEYS_R K05 K06 K07 K08 K09 K15 K16 K17 K18 K19 K25 K26 K27 K28 K29
+#define KEYS_T K32 K33 K34 K35 K36 K37
 
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_LEFTPINKIE 2 3
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_LEFTINNERINDEX 3 4
@@ -116,6 +126,10 @@ K00  K01  K02  K03  K04       K05  K06  K07  K08  K09 \
 K10  K11  K12  K13  K14       K15  K16  K17  K18  K19 \
 K20  K21  K22  K23  K24       K25  K26  K27  K28  K29 \
           K32  K33  K34       K35  K36  K37
+
+#define KEYS_L K00 K01 K02 K03 K04 K10 K11 K12 K13 K14 K20 K21 K22 K23 K24
+#define KEYS_R K05 K06 K07 K08 K09 K15 K16 K17 K18 K19 K25 K26 K27 K28 K29
+#define KEYS_T K32 K33 K34 K35 K36 K37
 
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_LEFTPINKIE 1 2
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_LEFTINNERINDEX 2 3
