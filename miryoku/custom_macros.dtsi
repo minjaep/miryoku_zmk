@@ -1,0 +1,1 @@
+U_MACRO(u_macro_lang, wait-ms = <0>; bindings = <&kp LG(SPACE)>, <&tog U_EXTRA>;)
