@@ -69,7 +69,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            \
 &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            U_A_LANG,          &trans,            &trans
 
-#if defined (MIRYOKU_KEYBOARD_CORNEISH_ZEN)
+#if defined (MIRYOKU_KEYBOARD_CORNEISH_ZEN_V2)
 
 #if !defined (MIRYOKU_LAYOUTMAPPING_CORNE)
 
