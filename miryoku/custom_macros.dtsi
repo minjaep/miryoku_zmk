@@ -1,4 +1,5 @@
 U_MACRO(u_macro_lang, wait-ms = <0>; bindings = <&kp LG(SPACE)>, <&tog U_EXTRA>;)
+U_MACRO(u_macro_and_lang, wait-ms = <0>; bindings = <&kp LS(SPACE)>, <&tog U_EXTRA>;)
 U_MACRO(u_macro_par, wait-ms = <0>; bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;)
 U_MACRO(u_macro_brc, wait-ms = <0>; bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;)
 U_MACRO(u_macro_set, wait-ms = <0>; bindings = <&kp BSLH>, <&kp LBRC>, <&kp BSLH>, <&kp RBRC>, <&kp LEFT>, <&kp LEFT>;)
@@ -32,4 +33,8 @@ minjaecombos_ ## LAYER ## _ ## POSITION { \
     MINJAE_COMBOS_MACRO(U_EXTRA, RIGHTLM, &kp EQUAL)
     MINJAE_COMBOS_MACRO(U_EXTRA, RIGHTLB, &u_macro_set)
   };
+};
+
+&soft_off {
+    hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
 };
