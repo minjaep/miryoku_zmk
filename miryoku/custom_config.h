@@ -69,7 +69,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            \
 &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            &trans,            U_A_LANG,          &trans,            &trans
 
-#if defined (MIRYOKU_KEYBOARD_CORNE)
+#if defined (MIRYOKU_KEYBOARD_CORNEISH_ZEN)
 
 #if !defined (MIRYOKU_LAYOUTMAPPING_CORNE)
 
@@ -116,7 +116,7 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 
 #endif
 
-#if defined (MIRYOKU_KEYBOARD_MINIDOX)
+#if defined (MIRYOKU_KEYBOARD_AHOKORE)
 
 #if !defined (MIRYOKU_LAYOUTMAPPING_MINIDOX)
 
